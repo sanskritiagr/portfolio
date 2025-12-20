@@ -1,46 +1,39 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { Github, Folder } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 const projects = [
   {
-    title: "Customer Churn Prediction",
-    description: "Built an ML model to predict customer churn with 92% accuracy using ensemble methods. Deployed as a REST API with Flask.",
-    tags: ["Python", "XGBoost", "Flask", "Docker"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "Open Source Contributor – GSSoC '24",
+    description: "Optimized real-world ML projects. Applied time-series modeling (ARIMA/LSTM) reducing prediction error by 70%. Built NLP pipelines with retrieval-style preprocessing achieving 85% accuracy.",
+    tags: ["ARIMA", "LSTM", "NLP", "Python"],
+    github: "https://github.com/sanskritiagr",
   },
   {
-    title: "Sentiment Analysis Engine",
-    description: "Deep learning-based sentiment analyzer for social media data using BERT transformers. Processes 10K+ tweets per minute.",
-    tags: ["PyTorch", "Transformers", "NLP", "AWS"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "Attendance using Face Recognition",
+    description: "Browser-based Face Recognition app. Automatically records attendance with date/time when users are detected. Integrated with database for storing and analyzing records.",
+    tags: ["StreamLit", "OpenCV", "TensorFlow", "Flask"],
+    github: "https://github.com/sanskritiagr",
   },
   {
-    title: "Image Classification API",
-    description: "CNN-based image classifier trained on custom dataset. Achieved 95% accuracy with data augmentation techniques.",
-    tags: ["TensorFlow", "Keras", "FastAPI", "Redis"],
-    github: "https://github.com",
+    title: "Data Ingestion Pipeline @ Google",
+    description: "Designed scalable data ingestion pipelines for GCP. Improved packet sampling reliability using Pub/Sub, reducing drop rates from 9% to 0.01%. Standardized telemetry data formats.",
+    tags: ["GCP", "Pub/Sub", "Python", "Data Engineering"],
+  },
+  {
+    title: "Embedding-based Ad Retrieval @ Microsoft",
+    description: "Designed embedding-based retrieval for MSN Ads diversity. Generated user-ad embeddings using Diverse DiskANN achieving 22% diversity uplift and 10% increase in Auction ISI.",
+    tags: ["Embeddings", "ML", "DiskANN", "Ads"],
+  },
+  {
+    title: "CV Pipeline @ Cornerstone",
+    description: "Engineered Computer Vision pipelines leveraging CNNs for real-time detection. Optimized Video Analytics for precise anomaly detection and behavioral pattern recognition.",
+    tags: ["CNN", "OpenCV", "Computer Vision", "Python"],
   },
   {
     title: "Time Series Forecasting",
-    description: "Sales forecasting model using LSTM networks and Prophet. Reduced prediction error by 35% compared to baseline.",
-    tags: ["Python", "LSTM", "Prophet", "Tableau"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    title: "Recommendation System",
-    description: "Collaborative filtering recommendation engine for e-commerce platform. Increased user engagement by 28%.",
-    tags: ["Python", "Spark", "ALS", "MongoDB"],
-    github: "https://github.com",
-  },
-  {
-    title: "Fraud Detection System",
-    description: "Real-time fraud detection using anomaly detection algorithms. Processes transactions with < 50ms latency.",
-    tags: ["Scikit-learn", "Kafka", "PostgreSQL", "Grafana"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    description: "Applied ARIMA and LSTM models for time-series forecasting and analysis as part of GSSoC contributions, reducing prediction error by 70% on benchmark datasets.",
+    tags: ["ARIMA", "LSTM", "Time Series", "Python"],
+    github: "https://github.com/sanskritiagr",
   },
 ];
 
@@ -67,22 +60,14 @@ const Projects = () => {
               <div className="flex items-start justify-between mb-4">
                 <Folder className="w-10 h-10 text-primary" />
                 <div className="flex items-center gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                  {project.demo && (
+                  {project.github && (
                     <a
-                      href={project.demo}
+                      href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <Github className="w-5 h-5" />
                     </a>
                   )}
                 </div>

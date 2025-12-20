@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -30,34 +30,36 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Hi, I'm <span className="text-gradient">Your Name</span>
+            Hi, I'm <span className="text-gradient">Sanskriti Agrawal</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-display animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            Machine Learning Enthusiast & Data Scientist
+            Mathematics & Computing @ IIT Dhanbad
           </p>
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            Passionate about transforming data into actionable insights. 
-            Building intelligent solutions with Python, TensorFlow, and scikit-learn.
+            Aspiring Data Scientist & ML Engineer with experience at{" "}
+            <span className="text-primary">Google</span>, <span className="text-primary">Microsoft</span>, and{" "}
+            <span className="text-primary">Cornerstone Solutions</span>. 
+            Building intelligent solutions with Python, PyTorch, and TensorFlow.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold px-8">
-              View Projects
+            <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold px-8" asChild>
+              <a href="#projects">View Projects</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10">
-              Download Resume
+            <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10" asChild>
+              <a href="#contact">Get in Touch</a>
             </Button>
           </div>
 
           {/* Social links */}
           <div className="flex items-center justify-center gap-6 animate-fade-up" style={{ animationDelay: "0.5s" }}>
             <a 
-              href="https://github.com" 
+              href="https://github.com/sanskritiagr" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover:glow-primary"
@@ -65,7 +67,7 @@ const Hero = () => {
               <Github className="w-5 h-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/sanskritiag" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover:glow-primary"
@@ -73,10 +75,16 @@ const Hero = () => {
               <Linkedin className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:your.email@example.com"
+              href="mailto:sanskriticodes@gmail.com"
               className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover:glow-primary"
             >
               <Mail className="w-5 h-5" />
+            </a>
+            <a 
+              href="tel:+918755728436"
+              className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover:glow-primary"
+            >
+              <Phone className="w-5 h-5" />
             </a>
           </div>
         </div>
