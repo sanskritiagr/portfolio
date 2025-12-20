@@ -1,8 +1,34 @@
-const skills = [
-  { category: "Languages", items: ["Python", "R", "SQL", "JavaScript"] },
-  { category: "ML/DL Frameworks", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"] },
-  { category: "Data Tools", items: ["Pandas", "NumPy", "Matplotlib", "Seaborn"] },
-  { category: "Cloud & MLOps", items: ["AWS", "Docker", "MLflow", "Git"] },
+import { Code2, Brain, Wrench, Cloud, Terminal, Award } from "lucide-react";
+
+const skillCategories = [
+  {
+    title: "Programming",
+    icon: Code2,
+    items: ["Python", "C/C++", "Java", "SQL", "MATLAB", "Bash"],
+  },
+  {
+    title: "ML & AI",
+    icon: Brain,
+    items: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Multimodal LLM"],
+  },
+  {
+    title: "Frameworks",
+    icon: Wrench,
+    items: ["PyTorch", "TensorFlow", "Flask", "OpenCV", "StreamLit"],
+  },
+  {
+    title: "Cloud & Tools",
+    icon: Cloud,
+    items: ["AWS", "GCP", "Pub/Sub", "Git", "Linux", "Docker"],
+  },
+];
+
+const achievements = [
+  "Amazon ML Summer School (85,000+ applicants)",
+  "Uber She++ '24 (Top 100 nationwide)",
+  "LinkedIn CoachIn Mentee '24 (Top 75 in India)",
+  "500+ DSA problems solved",
+  "Mentor at SIAM",
 ];
 
 const Skills = () => {
@@ -18,14 +44,19 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {skills.map((skill, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+          {skillCategories.map((skill, index) => (
             <div
-              key={skill.category}
+              key={skill.title}
               className="group p-6 rounded-xl card-gradient border border-border hover:border-primary/50 transition-all duration-300 hover:glow-primary"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <h3 className="font-display text-lg text-primary mb-4">{skill.category}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <skill.icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-display text-lg text-primary">{skill.title}</h3>
+              </div>
               <ul className="space-y-2">
                 {skill.items.map((item) => (
                   <li
@@ -39,6 +70,26 @@ const Skills = () => {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Achievements */}
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-2">
+              Achievements & <span className="text-gradient">Recognition</span>
+            </h3>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {achievements.map((achievement) => (
+              <div
+                key={achievement}
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/20 text-sm"
+              >
+                <Award className="w-4 h-4 text-primary" />
+                <span className="text-muted-foreground">{achievement}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
