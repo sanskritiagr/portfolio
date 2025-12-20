@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 const navLinks = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
+  { label: "Open Source", href: "#opensource" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -31,7 +32,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="font-display text-xl font-bold text-gradient">
-            {"<YN />"}
+            {"<SA />"}
           </a>
 
           {/* Desktop Navigation */}

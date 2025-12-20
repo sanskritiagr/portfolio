@@ -3,37 +3,58 @@ import { Badge } from "./ui/badge";
 
 const projects = [
   {
-    title: "Open Source Contributor – GSSoC '24",
-    description: "Optimized real-world ML projects. Applied time-series modeling (ARIMA/LSTM) reducing prediction error by 70%. Built NLP pipelines with retrieval-style preprocessing achieving 85% accuracy.",
-    tags: ["ARIMA", "LSTM", "NLP", "Python"],
-    github: "https://github.com/sanskritiagr",
-  },
-  {
     title: "Attendance using Face Recognition",
-    description: "Browser-based Face Recognition app. Automatically records attendance with date/time when users are detected. Integrated with database for storing and analyzing records.",
-    tags: ["StreamLit", "OpenCV", "TensorFlow", "Flask"],
-    github: "https://github.com/sanskritiagr",
+    description: "Browser-based Face Recognition app using StreamLit. Automatically records attendance with date/time when users are detected. Integrated with database for storing and analyzing records.",
+    tags: ["StreamLit", "OpenCV", "TensorFlow", "Flask", "Python"],
+    github: "https://github.com/sanskritiagr/Attendance-Face-Recognition",
   },
   {
-    title: "Data Ingestion Pipeline @ Google",
-    description: "Designed scalable data ingestion pipelines for GCP. Improved packet sampling reliability using Pub/Sub, reducing drop rates from 9% to 0.01%. Standardized telemetry data formats.",
-    tags: ["GCP", "Pub/Sub", "Python", "Data Engineering"],
+    title: "RAG Chatbot",
+    description: "Retrieval-Augmented Generation chatbot that combines document retrieval with LLM responses for accurate, context-aware conversations.",
+    tags: ["RAG", "LLM", "NLP", "Python", "LangChain"],
+    github: "https://github.com/sanskritiagr/rag_chatbot",
   },
   {
-    title: "Embedding-based Ad Retrieval @ Microsoft",
-    description: "Designed embedding-based retrieval for MSN Ads diversity. Generated user-ad embeddings using Diverse DiskANN achieving 22% diversity uplift and 10% increase in Auction ISI.",
-    tags: ["Embeddings", "ML", "DiskANN", "Ads"],
+    title: "RNN Image Captioning from Scratch",
+    description: "Built an image captioning model from scratch using RNNs. Generates natural language descriptions for images using encoder-decoder architecture.",
+    tags: ["RNN", "Deep Learning", "Computer Vision", "Python"],
+    github: "https://github.com/sanskritiagr/RNN-Image-Captioning-from-Scratch",
   },
   {
-    title: "CV Pipeline @ Cornerstone",
-    description: "Engineered Computer Vision pipelines leveraging CNNs for real-time detection. Optimized Video Analytics for precise anomaly detection and behavioral pattern recognition.",
-    tags: ["CNN", "OpenCV", "Computer Vision", "Python"],
+    title: "ShellyBot",
+    description: "AI-powered conversational bot with natural language understanding capabilities for interactive user experiences.",
+    tags: ["NLP", "Chatbot", "Python", "ML"],
+    github: "https://github.com/sanskritiagr/ShellyBot",
   },
   {
-    title: "Time Series Forecasting",
-    description: "Applied ARIMA and LSTM models for time-series forecasting and analysis as part of GSSoC contributions, reducing prediction error by 70% on benchmark datasets.",
-    tags: ["ARIMA", "LSTM", "Time Series", "Python"],
-    github: "https://github.com/sanskritiagr",
+    title: "SwasthAI",
+    description: "Healthcare AI application leveraging machine learning for health-related predictions and recommendations.",
+    tags: ["Healthcare", "ML", "Python", "AI"],
+    github: "https://github.com/sanskritiagr/SwasthAI",
+  },
+  {
+    title: "CNN Flower Prediction",
+    description: "Convolutional Neural Network model for classifying flower species. Trained on image dataset with data augmentation techniques.",
+    tags: ["CNN", "Image Classification", "TensorFlow", "Python"],
+    github: "https://github.com/sanskritiagr/CNN_FlowerPred",
+  },
+  {
+    title: "Real or AI Image Detection",
+    description: "Deep learning model to distinguish between real photographs and AI-generated images using advanced classification techniques.",
+    tags: ["Deep Learning", "CNN", "Python", "Image Analysis"],
+    github: "https://github.com/sanskritiagr/RealOrAI",
+  },
+  {
+    title: "Loan Prediction",
+    description: "Machine learning model to predict loan approval status based on applicant features. Uses classification algorithms for accurate predictions.",
+    tags: ["ML", "Classification", "Python", "Finance"],
+    github: "https://github.com/sanskritiagr/Loan-Prediction",
+  },
+  {
+    title: "Image Segmentation",
+    description: "Implementation of image segmentation techniques to partition images into meaningful regions for computer vision applications.",
+    tags: ["Computer Vision", "Segmentation", "Python", "Deep Learning"],
+    github: "https://github.com/sanskritiagr/Image-Segmentation",
   },
 ];
 
@@ -43,10 +64,10 @@ const Projects = () => {
       <div className="container px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Featured <span className="text-gradient">Projects</span>
+            Personal <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A collection of my machine learning and data science projects
+            Machine learning and AI projects I've built to solve real-world problems
           </p>
         </div>
 
@@ -59,21 +80,17 @@ const Projects = () => {
             >
               <div className="flex items-start justify-between mb-4">
                 <Folder className="w-10 h-10 text-primary" />
-                <div className="flex items-center gap-3">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
-                  )}
-                </div>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
               </div>
 
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
               <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
