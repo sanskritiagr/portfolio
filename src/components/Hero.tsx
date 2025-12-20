@@ -40,17 +40,14 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            Aspiring Data Scientist & ML Engineer with experience at{" "}
-            <span className="text-primary">Google</span>, <span className="text-primary">Microsoft</span>, and{" "}
-            <span className="text-primary">Cornerstone Solutions</span>. 
-            Building intelligent solutions with Python, PyTorch, and TensorFlow.
+            I enjoy building reliable, data-driven systems and ML-powered solutions. My experience spans internships at{" "}
+            <span className="text-primary">Google</span>, and{" "} <span className="text-primary">Microsoft</span>, along with hands-on open-source contributions,
+            ,where I work on production-quality code and scalable pipelines.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold px-8" asChild>
-              <a href="#projects">View Projects</a>
-            </Button>
+            
             <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
