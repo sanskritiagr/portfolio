@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Download, Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 const navLinks = [
@@ -49,8 +49,12 @@ const Navbar = () => {
             <Button
               size="sm"
               className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold"
+              asChild
             >
-              Resume
+              <a href="/resume.pdf" download="Sanskriti_Agrawal_Resume.pdf">
+                <Download className="w-4 h-4 mr-1" />
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -77,8 +81,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold w-full mt-2">
-                Resume
+              <Button className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold w-full mt-2" asChild>
+                <a href="/resume.pdf" download="Sanskriti_Agrawal_Resume.pdf">
+                  <Download className="w-4 h-4 mr-1" />
+                  Resume
+                </a>
               </Button>
             </div>
           </div>
