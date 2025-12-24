@@ -51,7 +51,8 @@ const Navbar = () => {
               className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold"
               asChild
             >
-              <a href="YOUR_DRIVE_LINK_HERE" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1ilkKXpb8ZEndXaOkWwGsaU8BGMKXraq2/view?usp=sharing"
+                target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-1" />
                 Resume
               </a>
