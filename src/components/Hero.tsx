@@ -1,4 +1,4 @@
-import { ArrowDown, Github, Linkedin, Mail, Phone } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -47,7 +47,12 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
-            
+            <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-primary-foreground font-semibold" asChild>
+              <a href="/resume.pdf" download="Sanskriti_Agrawal_Resume.pdf">
+                <Download className="w-4 h-4 mr-2" />
+                Download Resume
+              </a>
+            </Button>
             <Button size="lg" variant="outline" className="border-primary/50 hover:bg-primary/10" asChild>
               <a href="#contact">Get in Touch</a>
             </Button>
